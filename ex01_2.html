@@ -32,10 +32,10 @@
 </head>
 <body>
     <div id="btnGroup">
-        <button data-x="0" data-y="0" class="playBtn">좌상</button>
-        <button data-x="200" data-y="0" class="playBtn">우상</button>
-        <button data-x="0" data-y="200" class="playBtn">좌하</button>
-        <button data-x="200" data-y="200" class="playBtn">우하</button>
+        <button data-pos-x="0" data-pos-y="0" class="playBtn">좌상</button>
+        <button data-pos-x="200" data-pos-y="0" class="playBtn">우상</button>
+        <button data-pos-x="0" data-pos-y="200" class="playBtn">좌하</button>
+        <button data-pos-x="200" data-pos-y="200" class="playBtn">우하</button>
     </div>
     <div id="box">Box</div>
 
@@ -48,8 +48,8 @@
         for(var cnt=0; cnt<playBtnArr.length; cnt++) {
             playBtnArr[cnt].color = colors[cnt];
             playBtnArr[cnt].onclick = function(event) {
-                box.style.left = this.dataset.x + "px";
-                box.style.top = this.dataset.y + "px";
+                box.style.left = this.dataset.posX + "px";
+                box.style.top = this.dataset.posY + "px";
                 document.body.style.backgroundColor = this.color;
             }
         }
